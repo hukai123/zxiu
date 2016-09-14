@@ -1,0 +1,46 @@
+.s-tsdialog{
+	position:fixed;
+	left:50%;
+	top:50%;
+	margin:pxToRem(-94) 0 0 pxToRem(-116);
+	border-radius:pxToRem(12);
+	width:pxToRem(256);
+	height:pxToRem(188);
+	background:rgba(0,0,0,.6);
+	overflow:hidden;
+	display:none;
+	em{
+		display:block;
+		width:pxToRem(40);
+		height:pxToRem(40);
+		margin:pxToRem(40) auto pxToRem(20);
+	}
+	.loser{
+		background:url("../img/xiao.png") no-repeat 0 0;
+		background-size:100% 100%;
+	}
+	.loading{
+		background:url("../img/loading.png") no-repeat 0 0;
+		background-size:100% 100%;
+		-webkit-animation:demo 1.2s linear infinite;
+		-moz-animation:demo 1.2s linear infinite;
+	}
+	@-webkit-keyframes demo{
+		from{-webkit-transform:rotate(0deg);
+			}
+		to{-webkit-transform:rotate(360deg);
+		}
+	}
+	@-moz-keyframes demo{
+		from{-moz-transform:rotate(0deg);
+			}
+		to{-moz-transform:rotate(360deg);
+		}
+	}
+	p{
+		font-size:pxToRem(28);
+		text-align:center;
+		line-height:pxToRem(40);
+		color:#fff;
+	}
+}

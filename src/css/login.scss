@@ -1,0 +1,105 @@
+$yh:"微软雅黑","Microsoft yahei";
+@import "mobile";
+@import "showtip";
+body,html{
+	width:100%;
+	height:100%;
+	background:#f3eff0;
+}
+
+@mixin box ($box-sizing) {
+	-webkit-box-sizing:$box-sizing;
+	-moz-box-sizing:$box-sizing;
+	-ms-box-sizing:$box-sizing;
+	-o-box-sizing:$box-sizing;
+	box-sizing:$box-sizing;
+}
+
+header{
+	width:100%;
+	height:pxToRem(90);
+	background:#a90506;
+	text-align:center;
+	line-height:pxToRem(90);
+	span{
+		color:#fff;
+		font-family:$yh;
+		font-weight:bold;
+		font-size:pxToRem(36);
+	}
+}
+input::-webkit-input-placeholder{
+	color: #b4b4b4;	
+	font-size: pxToRem(28);
+}
+input::-ms-input-placeholder{
+	color:#b4b4b4;
+	font-size: pxToRem(28);
+}
+input::-moz-placeholder{
+	color: #b4b4b4;
+	font-size: pxToRem(28);
+}
+.logindiv{
+	@include box(border-box);
+	width:100%;
+	padding:pxToRem(30);
+	.passbox{
+		margin-top:pxToRem(10);
+	}
+	.inpbox{
+		@include box(border-box);
+		width:100%;
+		padding-left:pxToRem(20);
+		height:pxToRem(86);
+		background:#fff;
+		font-size:pxToRem(26);
+		font-family:$yh;
+		border:none;
+		border-radius:4px;
+	}
+	.passstyle{
+		margin-top:pxToRem(50);
+		margin-left:pxToRem(24);
+		font-size:pxToRem(30);
+		color:#5c5c5c;
+		a{
+			color:#ff1053;
+		}
+		label{
+			margin-right:pxToRem(30);
+			height:pxToRem(40);
+			line-height:pxToRem(40);
+			input{
+				width:pxToRem(30);
+				height:pxToRem(30);
+			}
+		}
+	}
+	.loginbox{
+		margin-top:pxToRem(50);
+	}
+	.abtn{
+		a{
+			width:100%;
+			height:pxToRem(84);
+			border:2px solid;
+			border-radius:4px;
+			color:#fff;
+			text-align:center;
+			line-height:pxToRem(84);
+			font-size:pxToRem(36);
+			display:block;
+			@include box(broder-box);
+		}
+		#login{
+			background:#b40607;
+			border-color:#840000;
+		}
+		#toRigister{
+			margin-top:pxToRem(10);
+			background:#505050;
+			border-color:#000002;
+		}
+	}
+}

@@ -1,0 +1,160 @@
+$base_color:deeppink;
+@charset 'UTF-8';
+$yh:"Microsoft yahei";
+*{
+    padding:0;
+    margin:0;
+}
+html,body{
+    width:100%;
+    height:100%;
+    background:#f3eff0;
+}
+
+body,h1,h2,h3,h4,h5,h6,blockquote,ol,ul,dl,dd,p,textarea,input,select,option,form {
+    margin:0; padding:0;
+}
+body{
+    background: #f5f4f0;
+    -webkit-tap-highlight-color:transparent;
+}
+ 
+ol,ul,textarea,input,option,th,td {
+    padding:0;
+}
+
+.page{
+    min-width: 320px;max-width: 750px;margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size:100%;
+}
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    display: block;
+}
+table {
+    border-collapse:collapse;border-spacing: 0;
+}
+ul,ol {
+    list-style-type:none;
+}
+.clearfix:after {
+    content:'.';display:block;height:0;clear:both;visibility:hidden;
+}
+//.clearfix {*zoom:1;}
+.clear {
+    clear:both;height:0;overflow:hidden;
+}
+
+input[type=text],textarea{
+    -webkit-appearance:none;
+}
+
+input:focus{
+    -webkit-user-modify:read-write-plaintext-only;
+}
+fieldset, img {
+    border: 0;
+}
+a {
+    text-decoration:none;
+}
+a,textarea,input{
+    outline:none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+textarea {
+    overflow:auto;resize:none;
+}
+
+@mixin box($borbox){
+    -webkit-box-sizing:$borbox;
+    -moz-box-sizing:$borbox;
+    -o-box-sizing:$borbox;
+    -ms-box-sizing:$borbox;
+    box-sizing:$borbox;
+}
+
+
+header{
+    width:100%;
+    height:13.75vw;
+    background:#a90506;
+    text-align:center;
+    line-height:13.75vw;
+    font-size:5.625vw;
+    position:relative;
+    span{
+        color:#fff;
+        font-family:$yh;
+    }
+}
+
+section{
+    padding:4.6875vw;
+    @include box(border-box);
+    width:100%;
+    .inpbox{
+        width:100%;
+        background:#fff;
+        border-radius:4px;
+        padding:3.125vw 0 3.125vw 3.125vw;
+        height:13.75vw;
+        border:none;
+        @include box(border-box);
+    }
+    .passbox{
+        margin-top:1vw;
+    }
+    .passstyle{
+    margin-top:7.8125vw;
+    margin-left:3.75vw;
+    font-size:4.6875vw;
+    color:#5c5c5c;
+        a{
+            color:#ff1053;
+        }
+        label{
+            margin-right:4.6875vw;
+            height:6.25vw;
+            line-height:6.25vw;
+            input{
+                width:4.6875vw;
+                height:4.6875vw;
+            }
+        }
+    }
+    .loginbox{
+        margin-top:7.8125vw;
+    }
+    .abtn{
+        a{
+            width:100%;
+            height:13.125vw;
+            border:2px solid;
+            border-radius:4px;
+            color:#fff;
+            text-align:center;
+            line-height:13.125vw;
+            font-size:5.635vw;
+            display:block;
+            @include box(broder-box);
+        }
+        #login{
+            background:#b40607;
+            border-color:#840000;
+        }
+        #toRigister{
+            margin-top:1.4vw;
+            background:#505050;
+            border-color:#000002;
+        }
+    }
+}

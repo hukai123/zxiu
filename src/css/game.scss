@@ -1,0 +1,171 @@
+$yh:"微软雅黑","Microsoft yahei";
+@import "mobile";
+@import "showtip";
+body,html{
+	width:100%;
+	height:100%;
+	background:#f3eff0;
+}
+@mixin box ($box-sizing) {
+	-webkit-box-sizing:$box-sizing;
+	-moz-box-sizing:$box-sizing;
+	-ms-box-sizing:$box-sizing;
+	-o-box-sizing:$box-sizing;
+	box-sizing:$box-sizing;
+}
+
+header{
+	width:100%;
+	height:pxToRem(90);
+	background:#a90506;
+	text-align:center;
+	line-height:pxToRem(90);
+	position:relative;
+	span{
+		color:#fff;
+		font-family:$yh;
+		font-weight:bold;
+		font-size:pxToRem(36);
+	}
+	.goBack{
+		width:pxToRem(56);
+		height:pxToRem(44);
+		display:block;
+		background:url('../img/goback.png') 0 0 no-repeat;
+		background-size:100% 100%;
+		position:absolute;
+		left:pxToRem(18);
+		top:pxToRem(24);
+	}
+}
+
+section{
+	width:100%;
+	padding-top:pxToRem(20);
+	.box{
+		width:pxToRem(600);
+		height:pxToRem(600) ;
+		border: 1px solid #ccc;
+		margin:0 auto;
+		background:#fff;
+		position:relative;
+		overflow:hidden;
+	}
+	.timeBox{
+		margin-top:pxToRem(20);
+		width:pxToRem(600);
+		height:pxToRem(74) ;
+		border: 1px solid #ccc;
+		background:#545454;
+		line-height:pxToRem(74);
+		text-align: center;
+		margin:pxToRem(20) auto 0;
+	}
+	.showBox{
+		margin-top:pxToRem(20);
+		width:pxToRem(600);
+		border: 1px solid #ccc;
+		line-height:pxToRem(74);
+		text-align: center;
+		margin:pxToRem(20) auto 0;
+		overflow:hidden;
+		div{
+			width:50%;
+			height:pxToRem(74);
+			float:left;
+		}
+		.showscore{
+			background:#545454;
+		}
+		.showlist{
+			background:#a90506;
+			color:#fff;
+		}
+	}
+	.shade{
+		width:100%;
+		height:100%;
+		position:absolute;
+		left:0;
+		top:0;
+		z-index:10;
+		background: rgba(0,0,0,0.4);
+		.ready{
+			width:pxToRem(220);
+			height:pxToRem(220);
+			background: rgba(23,231,61,1);
+			color:deeppink;
+			font-size: pxToRem(60);
+			line-height:pxToRem(220);
+			font-family:$yh;
+			font-weight:bold;
+			border-radius:4px;
+			text-align:center;
+			position:absolute;
+			margin:auto;
+			top:0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 20;
+		}
+	}
+	.shade1{
+		display:none;
+		width:100%;
+		height:100%;
+		position:absolute;
+		left:0;
+		top:0;
+		z-index:30;
+		background: rgba(0,0,0,0.4);
+		.getscore{
+			width:pxToRem(320);
+			height:pxToRem(160);
+			background: rgba(169,5,6,1);
+			color:#fff;
+			font-size: pxToRem(40);
+			line-height:pxToRem(80);
+			font-family:$yh;
+			// font-weight:bold;
+			border-radius:4px;
+			text-align:center;
+			position:absolute;
+			margin:auto;
+			top:0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 40;
+			a{
+				display:inline-block;
+				width:50%;
+				height:pxToRem(80);
+				line-height:pxToRem(80);
+				border:1px solid #eee;
+				box-shadow:0 0 2px #eee inset;
+				@include box(border-box);
+			}
+		}
+	}
+
+}
+
+.mycar{
+	position:absolute;
+	background:green;
+}
+.gold{
+	position:absolute;
+}
+.y{
+	background:#f90d2e;
+}
+.r{
+	background:red;
+}
+.w{
+	background:yellow;
+}
+
+

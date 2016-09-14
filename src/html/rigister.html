@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/rigister.css">
+</head>
+<body>
+	<header> 
+		<a href="javascript:history.go(-1);" class="goBack"></a>
+		<span>用户注册</span>
+	</header>
+	<section class="rigisterdiv">
+		<ul class="rigisterlist">
+			<li>
+				<div><span>账户名称 :</span><input type="text" placeholder="请输入账户" id="account">
+				</div>
+			</li>
+			<li>
+				<div><span>登录密码 :</span><input type="password" placeholder="请输入密码" id="loginpwd"></div>
+			</li>
+			<li>
+				<div><span>确认密码 :</span><input type="password" placeholder="请确认密码" id="dbpwd"></div>
+			</li>
+			<li class="lastli">
+				<div>
+					<a href="#" class="submit">确认注册</a>
+				</div>
+			</li>
+		</ul>
+	</section>
+	
+	<div class="s-tsdialog">
+		<em class="loser"></em>
+		<p>正在提交....</p>
+	</div>
+
+	<script type="text/javascript" src="../js/rigister.js">
+		
+	</script>
+
+</body>
+</html>

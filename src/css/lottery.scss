@@ -1,0 +1,91 @@
+$yh:"微软雅黑","Microsoft yahei";
+@import "mobile";
+@import "showtip";
+body,html{
+	width:100%;
+	height:100%;
+	background:#f3eff0;
+}
+@mixin box ($box-sizing) {
+	-webkit-box-sizing:$box-sizing;
+	-moz-box-sizing:$box-sizing;
+	-ms-box-sizing:$box-sizing;
+	-o-box-sizing:$box-sizing;
+	box-sizing:$box-sizing;
+}
+
+header{
+	width:100%;
+	height:pxToRem(90);
+	background:#a90506;
+	text-align:center;
+	line-height:pxToRem(90);
+	position:relative;
+	span{
+		color:#fff;
+		font-family:$yh;
+		font-weight:bold;
+		font-size:pxToRem(36);
+	}
+	.goBack{
+		width:pxToRem(56);
+		height:pxToRem(44);
+		display:block;
+		background:url('../img/goback.png') 0 0 no-repeat;
+		background-size:100% 100%;
+		position:absolute;
+		left:pxToRem(18);
+		top:pxToRem(24);
+	}
+}
+
+input::-webkit-input-placeholder{
+	color: #a1a1a1;	
+	font-size: pxToRem(28);
+}
+input::-ms-input-placeholder{
+	color:#a1a1a1;
+	font-size: pxToRem(28);
+}
+input::-moz-placeholder{
+	color: #a1a1a1;
+	font-size: pxToRem(28);
+}
+section{
+	width:100%;
+	padding-top:pxToRem(20);
+	.gameBox{
+		width:100%;
+		@include box(border-box);
+		padding: 0 pxToRem(20);
+		.box{
+			width:pxToRem(200);
+			height:pxToRem(200);
+			color:#fff;
+			float:left;
+			box-shadow: 0 0 5px deeppink inset;
+			font-family:$yh;
+			font-size:pxToRem(60);
+			text-align:center;
+			line-height:pxToRem(200);
+		}
+		#btn{
+			color:red;
+			font-weight:bold;
+			background:-webkit-radial-gradient(white,black);
+			width:pxToRem(200);
+			height:pxToRem(200);
+			float:left;
+			font-family:$yh;
+			text-align:center;
+			font-size:pxToRem(60);
+			line-height:pxToRem(200);
+		}
+		.touch{
+			background:green;
+		}
+		.disabled{
+			pointer-events:none; //让该元素点击失效
+		}
+	}
+}

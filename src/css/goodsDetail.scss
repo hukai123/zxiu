@@ -1,0 +1,112 @@
+$yh:"微软雅黑","Microsoft yahei";
+@import "mobile";
+@import "swiper-3.3.1.min.css";
+body,html{
+	width:100%;
+	height:100%;
+	
+}
+
+@mixin box ($box-sizing) {
+	-webkit-box-sizing:$box-sizing;
+	-moz-box-sizing:$box-sizing;
+	-ms-box-sizing:$box-sizing;
+	-o-box-sizing:$box-sizing;
+	box-sizing:$box-sizing;
+}
+header{
+	width:100%;
+	height:pxToRem(90);
+	background:#a90506;
+	text-align:center;
+	line-height:pxToRem(90);
+	position:relative;
+	span{
+		color:#fff;
+		font-family:$yh;
+		font-weight:bold;
+		font-size:pxToRem(36);
+	}
+	.goBack{
+		width:pxToRem(56);
+		height:pxToRem(44);
+		display:block;
+		background:url('../img/goback.png') 0 0 no-repeat;
+		background-size:100% 100%;
+		position:absolute;
+		left:pxToRem(18);
+		top:pxToRem(24);
+	}
+}
+section{
+//	height:100%;5
+	#main-swiper{
+		height:100%;
+		.swiper-slide{
+			height:100%;
+			background:pink;
+			#detail-swiper{
+			    width: 100%;
+			    height: 100%;
+			    .swiper-slide{
+			        width: 100%;
+                    height: 100%;
+                    img{
+                        width:100%;
+                        height:100%;
+                    }   
+			    }
+			    .page2{
+			        bottom:10px;
+                    height:12px;
+//                  display:flex;
+//                  justify-content:center;
+                    line-height: 12px;
+                    .my-bullet{
+                        display: inline-block;
+                        width:12px;
+                        height:12px;
+                        
+                        border-radius:50%;
+                        background:#fff;
+                        margin: 0 3px;
+                      }
+                    .my-bullet-active{
+                        background:#dc1a57;
+                    }
+                }
+			}
+		}
+		.page1{
+		    bottom:0;
+            display:flex;
+            .swiper-pagination-bullet{
+                flex:1;
+                background:#5a595f;
+                height:pxToRem(90);
+                border-radius: 0;
+                opacity: 1;
+                margin: 0;
+                border-right: 1px solid #000;
+                color: #fff;
+                line-height: pxToRem(90);
+                font-size:pxToRem(36);
+                font-family:$yh;
+            }
+            .swiper-pagination-bullet:last-child{
+                border: 0;
+            }
+            .swiper-pagination-bullet-active{
+                background: #e6356b;
+            }
+		}
+		
+	}
+}
+
+
+
+
+
+
+

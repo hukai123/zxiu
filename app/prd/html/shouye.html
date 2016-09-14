@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/shouye.css">
+</head>
+<body>
+	<header>
+		<span>商品首页</span>
+	</header>
+	<div class="searchBox">
+		<div class="searchdiv">
+			<em class="iconfont" id="searchBtn">&#xe615;</em>
+			<input type="text" class="searchinp" placeholder="请输入搜索内容">
+		</div>
+	</div>
+	<div class="swiper-container" id="myswiper">
+		<div class="swiper-wrapper">
+<!-- 		<div class="swiper-slide">
+				<img src="" alt="">
+			</div>
+			<div class="swiper-slide">
+				<img src="" alt="">
+			</div>
+			<div class="swiper-slide"><img src="" alt=""></div>
+			<div class="swiper-slide"><img src="" alt=""></div> -->
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<!-- 滑动区域 -->
+	<div id="wrapper">
+		<div id="scroller">
+			<div id="pullDown">
+				<span class="pullDownIcon"></span>
+				<span class="pullDownLabel">下拉刷新...</span>
+			</div>
+			<ul id="thelist">
+				<li>
+					<dl>
+						<dt>
+							<img src="http://s18.mogucdn.com/p1/151021/11gcxq_ie4tqojzmvsgezrvgqzdambqgqyde_640x960.jpg_220x330.webp">
+						</dt>
+						<dd>
+							<h3>
+								2015韩国东大门女装秋冬季新款波点圆领长袖百搭卫衣波点波点波点
+							</h3>
+							<div>
+								<b class="price">￥90</b>
+								<span class="oldprice">￥150</span>
+							</div>
+							<span class="discount">6折</span>
+							<a href="#" id="addGoodInCar"></a>
+						</dd>
+					</dl>
+					<div class='clickarea'></div>
+				</li>
+								<li>
+					<dl>
+						<dt>
+							<img src="http://s18.mogucdn.com/p1/151021/11gcxq_ie4tqojzmvsgezrvgqzdambqgqyde_640x960.jpg_220x330.webp">
+						</dt>
+						<dd>
+							<h3>
+								2015韩国东大门女装秋冬季新款波点圆领长袖百搭卫衣波点波点波点
+							</h3>
+							<div>
+								<b class="price">￥90</b>
+								<span class="oldprice">￥150</span>
+							</div>
+							<span class="discount">6折</span>
+							<a href="#" id="addGoodInCar"></a>
+						</dd>
+					</dl>
+					<div class='clickarea'></div>
+				</li>
+								<li>
+					<dl>
+						<dt>
+							<img src="http://s18.mogucdn.com/p1/151021/11gcxq_ie4tqojzmvsgezrvgqzdambqgqyde_640x960.jpg_220x330.webp">
+						</dt>
+						<dd>
+							<h3>
+								2015韩国东大门女装秋冬季新款波点圆领长袖百搭卫衣波点波点波点
+							</h3>
+							<div>
+								<b class="price">￥90</b>
+								<span class="oldprice">￥150</span>
+							</div>
+							<span class="discount">6折</span>
+							<a href="#" id="addGoodInCar"></a>
+						</dd>
+					</dl>
+					<div class='clickarea'></div>
+				</li>
+								<li>
+					<dl>
+						<dt>
+							<img src="http://s18.mogucdn.com/p1/151021/11gcxq_ie4tqojzmvsgezrvgqzdambqgqyde_640x960.jpg_220x330.webp">
+						</dt>
+						<dd>
+							<h3>
+								2015韩国东大门女装秋冬季新款波点圆领长袖百搭卫衣波点波点波点
+							</h3>
+							<div>
+								<b class="price">￥90</b>
+								<span class="oldprice">￥150</span>
+							</div>
+							<span class="discount">6折</span>
+							<a href="#" id="addGoodInCar"></a>
+						</dd>
+					</dl>
+					<div class='clickarea'></div>
+				</li>
+			</ul>
+			<div id="pullUp">
+				<span class="pullUpIcon"></span>
+				<span class="pullUpLabel">加载更多...</span>
+			</div>
+		</div>
+	</div>
+	<div class="footer-container"></div>
+	<script type="text/javascript" src="../js/shouye.js"></script>
+	<script type="text/javascript">
+	var arrHtml = ['shouye','shopList','shoppingCar','myxiu','more'];
+	//判断用户是否是第一次打开，如果第一次打开，把footer默认初始跳转值传到localStorage
+	if(localStorage.visitWebCount){
+		localStorage.visitWebCount++;
+	}else{
+		localStorage.visitWebCount = 1;
+	}
+	if(localStorage.visitWebCount==1){
+		for(var i in arrHtml){
+			var htmlHash = 'htmlHash_'+i;
+			localStorage.setItem(htmlHash,arrHtml[i]);
+		}
+	}
+
+	</script>
+</body>
+</html>

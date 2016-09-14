@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: #f3eff0; }
+
+.mybox {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 5px;
+  -moz--border-radius: 5px;
+  -ms--border-radius: 5px;
+  -o--border-radius: 5px;
+  border-radius: 5px; }
+
+header {
+  height: 0.88rem;
+  width: 100%;
+  background: #a90506;
+  text-align: center;
+  line-height: 0.88rem;
+  position: relative;
+  font-size: 0.36rem; }
+  header span {
+    color: #fff;
+    font-family: "Microsoft yahei"; }
+  header a {
+    display: block;
+    width: 0.48rem;
+    height: 0.40rem;
+    position: absolute;
+    top: 0.24rem;
+    left: 0.26rem;
+    background: url(../images/goback.png) 0 0 no-repeat;
+    background-size: 100% 100%; }
+
+.container {
+  width: 100%;
+  padding: 0 .3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+  .container ul {
+    list-style: none;
+    width: 100%;
+    overflow: hidden; }
+    .container ul li {
+      margin-top: .3rem; }
+      .container ul li div {
+        height: .88rem;
+        width: 100%;
+        background: #fff;
+        border-radius: 4px;
+        padding-left: .2rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        line-height: .88rem;
+        font-size: .28rem;
+        vertical-align: top; }
+        .container ul li div span {
+          color: #505050; }
+        .container ul li div input {
+          outline: none;
+          border: none;
+          width: 4rem;
+          padding: .24rem 0;
+          height: .4rem;
+          font-size: .3rem; }
+        .container ul li div .register {
+          width: 100%;
+          height: .88rem;
+          background: #b30707;
+          color: #fff;
+          font-family: "Microsoft yahei";
+          -webkit-border-radius: 4px;
+          -moz--border-radius: 4px;
+          -ms--border-radius: 4px;
+          -o--border-radius: 4px;
+          border-radius: 4px;
+          font-size: .36rem;
+          border: 2px solid #840000; }
+        .container ul li div input::-webkit-input-placeholder {
+          color: #a1a1a1;
+          font-size: .28rem; }
+        .container ul li div input::-ms-input-placeholder {
+          color: #a1a1a1;
+          font-size: .28rem; }
+        .container ul li div input::-moz-placeholder {
+          color: #a1a1a1;
+          font-size: .28rem; }
+      .container ul li .last-div {
+        padding: 0;
+        margin-top: 1.8rem; }

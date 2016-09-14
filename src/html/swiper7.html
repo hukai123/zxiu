@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>超出导航</title>
+	<meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=2,minimum-scale=1,user-scalable=no">
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+	<link rel="stylesheet" href="../css/swiper-3.3.1.min.css">
+	<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="../js/swiper-3.3.1.min.js"></script>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#swiper1{
+		width:100%;
+	}
+	#swiper1 .swiper-slide{
+		font-size: "微软雅黑";
+		width:25%;
+		text-align: center;
+		line-height: 50px;
+		height: 50px;
+		color:#fff;
+		background: #ccc;
+		font-weight: bold;
+	}
+	.active-nav{
+		background: #f2cc1c !important;
+		color:#fff;
+	}
+	#swiper2{
+		width:100%;
+	}
+	#swiper2 .swiper-slide{
+		width: 100%;
+		height: 300px;
+		text-align: center;
+		line-height: 300px;
+		color:#fff;
+		font-weight: bold;
+		font-size: "微软雅黑";
+		font-size: 60px;
+	}
+	.swiper-slide:nth-child(even){
+		background: red;
+	}
+	.swiper-slide:nth-child(odd){
+		background: deeppink;
+	}
+	</style>
+</head>
+<body>
+	<div class="swiper-container" id="swiper1">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide active-nav">导航一</div>
+			<div class="swiper-slide">导航二</div>
+			<div class="swiper-slide">导航三</div>
+			<div class="swiper-slide">导航四</div>
+			<div class="swiper-slide">导航五</div>
+			<div class="swiper-slide">导航六</div>
+			<div class="swiper-slide">导航七</div>
+			<div class="swiper-slide">导航八</div>
+		</div>
+	</div>
+	<div class="swiper-container" id="swiper2">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">slide1</div>
+			<div class="swiper-slide">slide2</div>
+			<div class="swiper-slide">slide3</div>
+			<div class="swiper-slide">slide4</div>
+			<div class="swiper-slide">slide5</div>
+			<div class="swiper-slide">slide6</div>
+			<div class="swiper-slide">slide7</div>
+			<div class="swiper-slide">slide8</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	var swiper1 = new Swiper('#swiper1',{
+		slidesPerView:"auto",
+		watchSlidesProgress : true,
+		watchSlidesVisibility : true,
+		//开启watchSlidesVisibility选项前需要先开启watchSlidesProgress，如果开启了watchSlidesVisibility，则会在每个可见slide增加一个classname，默认为'swiper-slide-visible'。
+		resistanceRatio:0,
+		// onTap:function(){
+		// 	swiper2.slideTo(swiper1.clickedIndex);
+		// }
+		onTap:function(){
+			// console.log(swiper1.activeIndex);
+			// console.log(swiper1.clickedIndex);
+			// swiper2.slideTo(swiper1.)
+			swiper2.slideTo(swiper1.clickedIndex);
+		}
+	})
+	var swiper2 = new Swiper('#swiper2',{
+		resistanceRatio:0,
+		onSlideChangeStart:function(){
+			change();
+		}
+	});
+	// function updateNavposition(){
+		
+	// 	var currentIndex = swiper2.activeIndex;
+	// 	console.log(currentIndex);
+	// 	$('#swiper1 .active-nav').removeClass('active-nav');
+	// 	var activeNav = $('#swiper1 .swiper-slide').eq(currentIndex).addClass('active-nav');
+	// 	// console.log(activeNav.index())
+	// 	if(!activeNav.hasClass('swiper-slide-visible')){
+	// 		if(currentIndex>swiper1.activeIndex){
+	// 			var num = Math.floor(swiper1.width/activeNav.width()-1);
+	// 			// swiper1.activeIndex;
+	// 			swiper1.slideTo(currentIndex-num)
+	// 		}else{
+	// 			swiper1.slideTo(currentIndex)
+	// 		}
+	// 	}
+	// }
+
+	// swiper1.on('tap',function(){
+	// 	var index = swiper1.clickedIndex;
+	// 	console.log(swiper1.clickedIndex);
+	// 	$('#swiper1 .swiper-slide').eq(index).addClass('active-nav').siblings().removeClass('active-nav');
+	// })
+
+
+	function change(){
+		var currentIndex = swiper2.activeIndex;
+		// console.log(currentIndex);
+		var activeNav = $('#swiper1 .swiper-slide').removeClass('active-nav').eq(currentIndex).addClass('active-nav')
+		//表示执行高亮先生  activeNav 指向高亮对象 jq对象
+		if(!activeNav.hasClass('swiper-slide-visible')){
+			if(currentIndex>swiper1.activeIndex){
+				var oNum = Math.floor(swiper1.width/activeNav.width());
+				//求出当前 swiper1 显示的 slide的个数
+				var swiper1ActiveIndex = currentIndex - oNum + 1;
+				swiper1.slideTo(swiper1ActiveIndex);
+			}else{
+				swiper1.slideTo(currentIndex);
+			}
+		}
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html id="html">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/register.css"/>
+	</head>
+	<body>
+		<header>
+			<a href="javascript:history.go(-1);"></a>
+			<span>用户注册</span>
+		</header>
+		
+		<section class="container">
+			<ul>
+				<li>
+					<div><span>账户名称 : </span><input type="text" placeholder="请输入账户"/></div>
+				</li>
+				<li>
+					<div><span>登录密码 : </span><input type="password" placeholder="请输入账户"/></div>
+				</li>
+				<li>
+					<div><span>确认密码 : </span><input type="password" placeholder="请确认密码"/></div>
+				</li>
+				<li>
+					<div class="last-div">
+						<input class="register" type="button" value="确认注册"/>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<div class="s-tsdialog">
+			<em class="loser"></em>
+			<p>正在提交....</p>
+		</div>
+
+		<script type="text/javascript">
+			//求出设备宽度
+			var w = document.documentElement.clientWidth;
+			var oHtml = document.getElementById("html");
+			//通过设备宽度来改变对象的根节点字体大小
+			oHtml.style.fontSize = w/640*100 + "px";
+			//当屏幕窗口大小改变时的时候
+			window.onresize = function(){
+				var w = document.documentElement.clientWidth;
+				var oHtml = document.getElementById("html");
+				//通过设备宽度来改变对象的根节点字体大小
+				oHtml.style.fontSize = w/640*100 + "px";
+			}
+		</script>
+	</body>
+</html>

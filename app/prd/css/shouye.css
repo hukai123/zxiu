@@ -1,0 +1,340 @@
+@charset "UTF-8";
+@import url(../icons/iconfont.css);
+@import url(swiper-3.3.1.min.css);
+html {
+  font-size: 62.5%;
+  font-family: "微软雅黑", "Microsoft yahei"; }
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f5f4f0;
+  -webkit-tap-highlight-color: transparent; }
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0; }
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+/* ios默认文本框阴影 */
+input[type=text], textarea {
+  -webkit-appearance: none; }
+
+/* 低版本安卓文本框层级问题 */
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+a, textarea, input {
+  outline: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 75% !important;
+    /* 12÷16=75.0% */ } }
+
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 87.89063% !important;
+    /* 375/320*12÷16=87.8906% */ } }
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 97.03% !important;
+    /* 15.525÷16=94% */ } }
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 112.5% !important;
+    /* 18÷16=94% */ } }
+
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 131.25% !important;
+    /* 21÷16=109% */ } }
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 150% !important;
+    /* 24÷16=125% */ } }
+
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 168.75% !important;
+    /* 27÷16=146.43% */ } }
+
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 175.78125% !important;
+    /* 28.125÷16=146.43% */ } }
+
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 187.5% !important;
+    /* 30÷16=146.43% */ } }
+
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 225% !important;
+    /* 36÷16=146.43% */ } }
+
+#wrapper {
+  position: absolute;
+  z-index: 10;
+  /*  header 和footer 的高度 */
+  top: 18rem;
+  bottom: 4.08333rem;
+  width: 100%;
+  background: rgba(0, 100, 0, 0.1);
+  overflow: auto;
+  box-sizing: border-box; }
+
+#scroller {
+  position: absolute;
+  z-index: 1;
+  /*	-webkit-touch-callout:none;*/
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  padding: 0; }
+
+#pullDown, #pullUp {
+  background: #e4e0e0;
+  height: 40px;
+  line-height: 40px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  font-size: 14px;
+  color: #888;
+  zoom: 1 !important; }
+
+#pullDown .pullDownIcon, #pullUp .pullUpIcon {
+  zoom: 1 !important;
+  display: block;
+  float: left;
+  width: 40px;
+  height: 40px;
+  background: url(../img/pull-icon@2x.png) 0 0 no-repeat;
+  -webkit-background-size: 40px 80px;
+  background-size: 40px 80px;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 250ms; }
+
+#pullDown .pullDownIcon {
+  -webkit-transform: rotate(0deg) translateZ(0); }
+
+#pullUp .pullUpIcon {
+  -webkit-transform: rotate(-180deg) translateZ(0); }
+
+#pullDown.flip .pullDownIcon {
+  -webkit-transform: rotate(-180deg) translateZ(0); }
+
+#pullUp.flip .pullUpIcon {
+  -webkit-transform: rotate(0deg) translateZ(0); }
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+  background-position: 0 100%;
+  -webkit-transform: rotate(0deg) translateZ(0);
+  -webkit-transition-duration: 0ms;
+  -webkit-animation-name: loading;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear; }
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg) translateZ(0); }
+  to {
+    -webkit-transform: rotate(360deg) translateZ(0); } }
+
+body, html {
+  background: #f3eff0; }
+
+header {
+  width: 100%;
+  height: 3.75rem;
+  background: #a90506;
+  text-align: center;
+  line-height: 3.75rem; }
+  header span {
+    color: #fff;
+    font-family: "微软雅黑", "Microsoft yahei";
+    font-weight: bold;
+    font-size: 1.5rem; }
+
+input::-webkit-input-placeholder {
+  color: #b2b2b4;
+  font-size: 1.16667rem; }
+
+input::-ms-input-placeholder {
+  color: #b2b2b4;
+  font-size: 1.16667rem; }
+
+input::-moz-placeholder {
+  color: #b2b2b4;
+  font-size: 1.16667rem; }
+
+.searchBox {
+  width: 100%;
+  height: 3.66667rem;
+  background: #52525a;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden; }
+  .searchBox .searchdiv {
+    width: 100%;
+    height: 2.33333rem;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 0.66667rem; }
+    .searchBox .searchdiv em {
+      line-height: 2.33333rem;
+      padding-left: 0.83333rem;
+      padding-right: 0.5rem;
+      float: left; }
+    .searchBox .searchdiv em.iconfont {
+      font-size: 1.66667rem;
+      color: #484850;
+      font-weight: bold; }
+    .searchBox .searchdiv .searchinp {
+      height: 1.66667rem;
+      line-height: 1.66667rem;
+      padding: 0.33333rem;
+      border: none;
+      width: 75%;
+      float: left;
+      font-size: 1.25rem; }
+
+#myswiper {
+  width: 100%;
+  height: 10.58333rem; }
+  #myswiper .swiper-slide {
+    width: 100%;
+    height: 100%; }
+    #myswiper .swiper-slide img {
+      width: 100%;
+      height: 100%; }
+  #myswiper .swiper-pagination-bullet-active {
+    background: #d31111; }
+
+#thelist {
+  width: 100%; }
+  #thelist li {
+    width: 100%;
+    height: 9.16667rem;
+    border-bottom: 1px solid #707070;
+    background: #fefcfd;
+    position: relative; }
+    #thelist li dl {
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0.83333rem 2.08333rem 1.08333rem 0.625rem;
+      overflow: hidden; }
+      #thelist li dl dt {
+        float: left;
+        margin-right: 0.625rem;
+        height: 7.25rem; }
+        #thelist li dl dt img {
+          width: 7.25rem;
+          height: 7.25rem; }
+      #thelist li dl dd {
+        width: 15.83333rem;
+        float: left;
+        height: 7.25rem;
+        position: relative; }
+        #thelist li dl dd h3 {
+          width: 100%;
+          font-size: 1.25rem;
+          color: #010101;
+          height: 3.33333rem;
+          line-height: 1.66667rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical; }
+        #thelist li dl dd a {
+          display: block;
+          width: 4.79167rem;
+          height: 2.20833rem;
+          background: url("../img/addcar.png") 0 0 no-repeat;
+          background-size: 4.79167rem 2.20833rem;
+          position: absolute;
+          right: 0;
+          bottom: 0.625rem; }
+        #thelist li dl dd div {
+          margin-top: 0.33333rem; }
+          #thelist li dl dd div .price {
+            color: #f62873;
+            font-size: 1.33333rem; }
+          #thelist li dl dd div .oldprice {
+            color: #d7d5d6;
+            font-size: 0.83333rem;
+            text-decoration: line-through;
+            margin-left: 0.41667rem; }
+        #thelist li dl dd .discount {
+          margin-top: 0.91667rem;
+          margin-left: 0.41667rem;
+          color: #010000;
+          font-size: 1rem; }
+    #thelist li .clickarea {
+      width: 19.16667rem;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0; }

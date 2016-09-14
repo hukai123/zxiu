@@ -1,0 +1,137 @@
+@import "mobile";
+@charset 'UTF-8';
+@mixin box($bor){
+    -webkit-box-sizing:$bor;
+    -moz-box-sizing:$bor;
+    -ms-box-sizing:$bor;
+    -o-box-sizing:$bor;
+    box-sizing:$bor;
+}
+
+@mixin rad($px){
+    -webkit-border-radius:$px;
+    -moz-border-radius:$px;
+    -ms-border-radius:$px;
+    -o-border-radius:$px;
+    border-radius:$px;
+}
+
+@mixin boxFlew($num){
+    -webkit-box-flex:$num;
+    -moz-box-flex:$num;
+    -ms-box-flex:$num;
+    -o-box-flex:$num;
+    box-flex: $num;
+}
+
+@mixin boxFGroup($num){
+    -webkit-box-flex-group:$num;
+    -moz-box-flex-group:$num;
+    -ms-box-flex-group:$num;
+    -o-box-flex-group:$num;
+    box-flex-group: $num;
+}
+
+@mixin boxOri($dir){
+    -webkit-box-orient:$dir;
+    -moz-box-orient:$dir;
+    -ms-box-orient:$dir;
+    -o-box-orient:$dir;
+    box-orient: $dir;
+}
+
+footer{
+    height: pxToRem(98);
+    width: 100%;
+    background: url(../images/h-footerbg.png);
+    @include boxFGroup(2);
+    display: -webkit-box;
+    display: -moz-box;
+}
+footer>div{
+    @include boxFlew(1);
+    width: 10px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    div{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: pxToRem(5);
+        width: 100%;
+        background: #e5376c;
+    }
+    .current{
+        display: block;
+    }
+    span{
+        display: inline-block;
+        height: pxToRem(24);
+        line-height: pxToRem(24);
+        font-size: pxToRem(24);
+        margin-top: pxToRem(10);
+    }
+    .iconfont{
+        height: pxToRem(24);
+        line-height: pxToRem(24);
+        font-size: pxToRem(24);
+        margin-top: pxToRem(9);
+    }
+}
+footer div .shoppingCart{
+    position: relative; 
+}
+footer div .shoppingCart .carNum{
+    display: none;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 8px;
+    background: #b52121;
+    position: absolute;
+    top: 2px;
+    right: -4px;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #fff;
+}
+
+//footer div span{
+//  display: inline-block;
+//  height: 12px;
+//  line-height: 12px;
+//  font-size: 12px;
+//  margin-top: 5.5px;
+//}
+//footer div span.iconfont{
+//  height: 24px;
+//  line-height: 24px;
+//  font-size: 24px;
+//  margin-top: 4.5px;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

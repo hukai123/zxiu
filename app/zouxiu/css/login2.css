@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #f3eff0; }
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f5f4f0;
+  -webkit-tap-highlight-color: transparent; }
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0; }
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+input[type=text], textarea {
+  -webkit-appearance: none; }
+
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+a, textarea, input {
+  outline: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+header {
+  width: 100%;
+  height: 13.75vw;
+  background: #a90506;
+  text-align: center;
+  line-height: 13.75vw;
+  font-size: 5.625vw;
+  position: relative; }
+  header span {
+    color: #fff;
+    font-family: "Microsoft yahei"; }
+
+section {
+  padding: 4.6875vw;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%; }
+  section .inpbox {
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    padding: 3.125vw 0 3.125vw 3.125vw;
+    height: 13.75vw;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box; }
+  section .passbox {
+    margin-top: 1vw; }
+  section .passstyle {
+    margin-top: 7.8125vw;
+    margin-left: 3.75vw;
+    font-size: 4.6875vw;
+    color: #5c5c5c; }
+    section .passstyle a {
+      color: #ff1053; }
+    section .passstyle label {
+      margin-right: 4.6875vw;
+      height: 6.25vw;
+      line-height: 6.25vw; }
+      section .passstyle label input {
+        width: 4.6875vw;
+        height: 4.6875vw; }
+  section .loginbox {
+    margin-top: 7.8125vw; }
+  section .abtn a {
+    width: 100%;
+    height: 13.125vw;
+    border: 2px solid;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    line-height: 13.125vw;
+    font-size: 5.635vw;
+    display: block;
+    -webkit-box-sizing: broder-box;
+    -moz-box-sizing: broder-box;
+    -o-box-sizing: broder-box;
+    -ms-box-sizing: broder-box;
+    box-sizing: broder-box; }
+  section .abtn #login {
+    background: #b40607;
+    border-color: #840000; }
+  section .abtn #toRigister {
+    margin-top: 1.4vw;
+    background: #505050;
+    border-color: #000002; }

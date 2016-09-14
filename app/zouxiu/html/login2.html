@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+	<header>
+		<span>开心摇摇用户登录</span>
+	</header>
+	<section class="logindiv">
+		<div class="namebox">
+			<input type="text" id='nameinp' class="inpbox" placeholder="请输入账户">
+		</div>
+		<div class="passbox">
+			<input type="password" id="passinp" class="inpbox" placeholder="请输入密码">
+		</div>
+		<div class="showpass passstyle">
+		<!-- lebel用法 -->
+			 <label for="showpwd">
+				<input type="checkbox" id="showpwd">显示密码
+			 </label>
+			 <a href="#" class="forgotpwd">忘记密码?</a>
+		</div>
+		<div class="markpwd passstyle">
+			<label for='autologin'>
+				<input type="checkbox" id="autologin">记住密码自动登录
+			</label>
+		</div>
+		<div class="loginbox abtn">
+			<a href="#" id="login">登录</a>
+		</div>
+		<div class="rigister abtn">
+			<a href="rigister.html" id="toRigister">注册</a>
+		</div>
+	</section>
+<!--<div class="s-tsdialog">
+	<em></em>
+	<p>正在提交....</p>
+</div>-->
+</body>
+</html>

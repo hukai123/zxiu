@@ -1,0 +1,31 @@
+$base_color:deeppink;
+$yh:"微软雅黑","Microsoft yahei";
+@import "mobile";
+@import "myscroll";
+@import "../icons/iconfont.css";
+@import "swiper-3.3.1.min.css";
+body,html{
+	background:#f3eff0;
+}
+
+@mixin box ($box-sizing) {
+	-webkit-box-sizing:$box-sizing;
+	-moz-box-sizing:$box-sizing;
+	-ms-box-sizing:$box-sizing;
+	-o-box-sizing:$box-sizing;
+	box-sizing:$box-sizing;
+}
+
+header{
+	width:100%;
+	height:pxToRem(90);
+	background:#a90506;
+	text-align:center;
+	line-height:pxToRem(90);
+	span{
+		color:#fff;
+		font-family:$yh;
+		font-weight:bold;
+		font-size:pxToRem(36);
+	}
+}

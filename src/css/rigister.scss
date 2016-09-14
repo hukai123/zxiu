@@ -1,0 +1,99 @@
+$yh:"微软雅黑","Microsoft yahei";
+@import "mobile";
+@import "showtip";
+body,html{
+	width:100%;
+	height:100%;
+	background:#f3eff0;
+}
+@mixin box ($box-sizing) {
+	-webkit-box-sizing:$box-sizing;
+	-moz-box-sizing:$box-sizing;
+	-ms-box-sizing:$box-sizing;
+	-o-box-sizing:$box-sizing;
+	box-sizing:$box-sizing;
+}
+
+header{
+	width:100%;
+	height:pxToRem(90);
+	background:#a90506;
+	text-align:center;
+	line-height:pxToRem(90);
+	position:relative;
+	span{
+		color:#fff;
+		font-family:$yh;
+		font-weight:bold;
+		font-size:pxToRem(36);
+	}
+	.goBack{
+		width:pxToRem(56);
+		height:pxToRem(44);
+		display:block;
+		background:url('../img/goback.png') 0 0 no-repeat;
+		background-size:100% 100%;
+		position:absolute;
+		left:pxToRem(18);
+		top:pxToRem(24);
+	}
+}
+
+input::-webkit-input-placeholder{
+	color: #a1a1a1;	
+	font-size: pxToRem(28);
+}
+input::-ms-input-placeholder{
+	color:#a1a1a1;
+	font-size: pxToRem(28);
+}
+input::-moz-placeholder{
+	color: #a1a1a1;
+	font-size: pxToRem(28);
+}
+.rigisterdiv{
+	@include box(border-box);
+	width:100%;
+	padding: 0 pxToRem(30);
+	ul{
+		width:100%;
+		li{
+			width:100%;
+			div{
+				width:100%;
+				background:#fff;
+				height:pxToRem(90);
+				padding-left:pxToRem(20);
+				@include box(border-box);
+				line-height:pxToRem(90);
+				margin-top:pxToRem(30);
+				border-radius:4px;
+				span{
+					color:#505050;
+					font-size:pxToRem(28);
+					margin-right:pxToRem(10);
+				}
+				input{
+					height:pxToRem(50);
+					border:none;
+					line-height:pxToRem(50);
+					font-size:pxToRem(28);
+				}
+			}
+		}
+		.lastli{
+			margin-top:pxToRem(160);
+			div{
+				background:#ca0808;
+				border:1px solid #820000;
+				@include box(border-box);
+				text-align:center;
+				padding-left:0;
+			}
+			a{
+				color:#fff;
+				font-size:pxToRem(38);
+			}
+		}
+	}
+}
